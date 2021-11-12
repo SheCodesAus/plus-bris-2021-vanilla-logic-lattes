@@ -1,1 +1,1 @@
-# plus-bris-2021-vanilla-logic-lattes
+# plus-bris-2021-vanilla-logic-lattes-react

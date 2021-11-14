@@ -3,7 +3,6 @@ import { useHistory, Link } from 'react-router-dom';
 import './LoginForm.css'
 
 const LoginForm = () => {
-
     const [credentials, setCredentials] = useState({
         username: "",
         password: "",

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from "./pages/HomePage"
 import Login from "./pages/LoginPage";
@@ -7,6 +7,8 @@ import Nav from './components/Nav/Nav';
 import './App.css'
 
 const App = () => {
+  const [isLoggedIn] = useState(window.localStorage.getItem("token"))
+
   return (
     <Router>
       <div>
@@ -15,12 +17,16 @@ const App = () => {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/register">
+          <Router path="/register">
+            {/* {isLoggedIn ? <Register /> : <Login />} */}
             <Register />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+          </Router>
+          <Router path="/home">
+            {isLoggedIn ? <Home /> : <Login />}
+          </Router>
+          <Router path="/">
+            {isLoggedIn ? <Home /> : <Login />}
+          </Router>
         </Switch>
       </div>
     </Router>

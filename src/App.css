@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Poppins&family=Roboto:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+
+
+}
+
 html,
 body {
   width: 100%;
   height: 100%;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: 'Poppins', "Helvetica Neue", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   background: #f0f0f0;
 }

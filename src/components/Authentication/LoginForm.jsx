@@ -57,11 +57,11 @@ const LoginForm = () => {
                 <form onSubmit={handleSubmit} className="form-login">
                     <p className=" title-login">Login to your account</p>
                     <div className="form-item-login">
-                        <label className="label-login" for="username">Username:</label>
+                        <label className="label-login" >Username:</label>
                         <input className="field-login" type="text" id="username" placeholder="Enter your username" onChange={handleChange} />
                     </div>
                     <div className="form-item-login">
-                        <label className="label-login" for="username">Password:</label>
+                        <label className="label-login" >Password:</label>
                         <input className="field-login" type="password" id="password" placeholder="Enter your password" onChange={handleChange} />
                     </div>
                     {

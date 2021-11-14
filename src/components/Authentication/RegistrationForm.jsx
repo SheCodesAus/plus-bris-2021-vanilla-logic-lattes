@@ -1,54 +1,63 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import './LoginForm.css'
+import { api } from '../../api/api'
 
 const RegistrationForm = () => {
 
-    const [credentials, setCredentials] = useState({
-        username: "",
-        password: "",
-    });
-
-    const [error, setError] = useState(false)
-    console.log(error)
+    // const history = useHistory();
+    // const [userInfo, setUser] = useState({});
+    // const handleChange = (event) => {
+    //     let { id, value } = event.target;
+    //     setUser((prevProject) => {
+    //         return {
+    //             ...prevProject,
+    //             [id]: value,
+    //         };
+    //     });
+    // };
+    // const postData = () => {
+    //     return fetch(`${process.env.REACT_APP_API_URL}users/`,
+    //         {
+    //             method: "post",
+    //             headers: { "Content-Type": "application/json" },
+    //             body: JSON.stringify(userInfo),
+    //         }).then(i => i.json());
+    // };
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     postData()
+    //         .then((response) => {
+    //             history.push("/");
+    //         })
+    // };
     const history = useHistory();
-
-    const handleChange = (e) => {
-        const { id, value } = e.target;
-        setCredentials((prevCredentials) => ({
-            ...prevCredentials,
-            [id]: value,
-        }));
+    const [userInfo, setUserInfo] = useState({});
+    const handleChange = (event) => {
+        let { id, value } = event.target;
+        setUserInfo((prevProject) => {
+            return {
+                ...prevProject,
+                [id]: value,
+            };
+        });
     };
-
+    console.log(api)
     const postData = () => {
-        return fetch(`${process.env.REACT_APP_API_URL}api-token-auth/`,
+        return fetch(`${process.env.REACT_APP_API_URL}users/`,
             {
                 method: "post",
-                headers: { "Content-Type": "application/json", },
-                body: JSON.stringify(credentials),
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(userInfo),
             }).then(i => i.json());
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (credentials.username && credentials.password) {
-            postData()
-                .then((response) => {
-                    if (response.token) {
-                        setError(false)
-                        window.localStorage.setItem("token", response.token);
-                        window.location = `${window.location.origin}/`
-                        history.push("/");
-                    } else {
-
-                        setError(true)
-                    }
-                })
-        }
-        else {
-            setError(true)
-        }
+        postData()
+            .then((response) => {
+                console.log('new user created')
+                history.push("/");
+            })
     };
 
     return (

@@ -6,7 +6,7 @@
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .form-login {
@@ -14,7 +14,7 @@
     border-radius: 4px;
     border: 1px solid #ccc;
     box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
-    margin: auto;
+    margin: 5em auto;
     width: 400px;
     height: 400px;
     display: flex;
@@ -32,7 +32,7 @@
 
 .field-login {
     width: 80%;
-    color: #6495ED;
+    color: #723ba5;
     font-size: 14px;
     letter-spacing: 1px;
     background: #e7e2f0;
@@ -46,7 +46,7 @@
 }
 
 .field-login:focus {
-    border: 1px solid #6495ED;
+    border: 1px solid #805fd8;
 
 }
 
@@ -56,12 +56,12 @@
     -moz-transition: all .4s ease;
     transition: all .4s ease;
     cursor: pointer;
-    color: cornflowerblue;
+    color: #805fd8;
     text-decoration: none;
 }
 
 .link-login:hover {
-    color: #A055DC;
+    color: purple;
 }
 
 .form-item-login {
@@ -69,7 +69,7 @@
 }
 
 .title-login {
-    color: cornflowerblue;
+    color: #805fd8;
     font-size: 1.5em;
     padding-left: 1em;
     padding-top: .5em;
@@ -83,7 +83,7 @@
     cursor: pointer;
     border-radius: 5em;
     color: #fff;
-    background: linear-gradient(to right, cornflowerblue, #9AB8ED);
+    background: linear-gradient(to right, #805fd8, #a29aed);
     border: 0;
     padding: .3em;
     font-size: 1.1rem;

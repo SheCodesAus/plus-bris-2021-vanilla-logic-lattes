@@ -2,7 +2,7 @@ import React from 'react';
 import './CanvasForm.css'
 //import { mockCanvas } from '../../api/mockCanvas.json'
 
-function CanvasForm() {
+const CanvasForm = () => {
     const handleSubmit = null;
     const handleChange = null;
     return (

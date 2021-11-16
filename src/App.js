@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from "./pages/HomePage"
 import Login from "./pages/LoginPage";
+import CreateCanvas from "./pages/CreateCanvasPage"
 import Register from "./pages/RegistrationPage";
 import Nav from './components/Nav/Nav';
 import './App.css'
@@ -21,6 +22,9 @@ const App = () => {
             {/* {isLoggedIn ? <Register /> : <Login />} */}
             <Register />
           </Router>
+          <Router path="/createCanvas">
+            {isLoggedIn ? <CreateCanvas /> : <Login />}
+          </Router>
           <Router path="/home">
             {isLoggedIn ? <Home /> : <Login />}
           </Router>
@@ -30,6 +34,7 @@ const App = () => {
         </Switch>
       </div>
     </Router>
+
   );
 }
 export default App;

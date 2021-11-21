@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
 import { api } from "../api"
 
+
 const CanvasPage = () => {
     const [canvasData, setCanvasData] = useState({ stickyNotes: [] });
     const { id } = useParams();
@@ -26,7 +27,6 @@ const CanvasPage = () => {
             <div className="canvas">
                 <h2 className="page-title">{canvasData.title}</h2>
                 {canvasData.stickyNotes.length > 0 ? <ul>{canvasData.stickyNotes.map((stickyNoteData, key) => { return (<li>{stickyNoteData.title} </li>); })}</ul> : <button>+</button>}
-
             </div>
 
         </div>

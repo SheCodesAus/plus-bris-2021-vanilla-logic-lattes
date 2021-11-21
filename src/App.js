@@ -21,24 +21,24 @@ const App = () => {
           <Route path="/login">
             <Login />
           </Route>
-          <Router path="/register">
+          <Route path="/register" >
             <Register />
-          </Router>
+          </Route>
           <Route path="/about">
             <About />
           </Route>
-          <Router path="/createcanvas">
+          <Route path="/createcanvas">
             {isLoggedIn ? <CreateCanvas /> : <Login />}
-          </Router>
+          </Route>
           <Route path="/canvas/:id">
             <CanvasPage />
           </Route>
-          <Router path="/home">
+          <Route path="/home">
             {isLoggedIn ? <Home /> : <Login />}
-          </Router>
-          <Router path="/">
+          </Route>
+          <Route path="/">
             {isLoggedIn ? <Home /> : <Login />}
-          </Router>
+          </Route>
         </Switch>
         <Footer />
       </div>

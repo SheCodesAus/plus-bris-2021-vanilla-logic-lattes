@@ -5,7 +5,10 @@ import Login from "./pages/LoginPage";
 import CreateCanvas from "./pages/CreateCanvasPage"
 import Register from "./pages/RegistrationPage";
 import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer'
+import About from "./pages/AboutPage";
 import './App.css'
+import CanvasPage from './pages/CanvasPage';
 
 const App = () => {
   const [isLoggedIn] = useState(window.localStorage.getItem("token"))
@@ -19,12 +22,17 @@ const App = () => {
             <Login />
           </Route>
           <Router path="/register">
-            {/* {isLoggedIn ? <Register /> : <Login />} */}
             <Register />
           </Router>
-          <Router path="/createCanvas">
+          <Route path="/about">
+            <About />
+          </Route>
+          <Router path="/createcanvas">
             {isLoggedIn ? <CreateCanvas /> : <Login />}
           </Router>
+          <Route path="/canvas/:id">
+            <CanvasPage />
+          </Route>
           <Router path="/home">
             {isLoggedIn ? <Home /> : <Login />}
           </Router>
@@ -32,6 +40,7 @@ const App = () => {
             {isLoggedIn ? <Home /> : <Login />}
           </Router>
         </Switch>
+        <Footer />
       </div>
     </Router>
 

@@ -12,5 +12,8 @@ body {
   height: 100%;
   font-family: 'Poppins', "Helvetica Neue", Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
-  background: #f0f0f0;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  display: grid;
+  place-items: center;
+  align-items: start;
 }

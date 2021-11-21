@@ -1,51 +1,46 @@
 nav * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
 }
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 6vh;
-    padding: 2%;
-    font-family: Poppins, sans-serif;
-    margin-bottom: 20px;
+nav,
+.nav {
+    text-align: right;
+    background-color: #fff;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
 }
 
-.logo {
-    color: #8969e4;
-    /* letter-spacing: 5px; */
-    font-size: 30px;
+a {
+    color: #fff;
     text-decoration: none;
+    text-transform: uppercase;
+    /* display: inline-block; */
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem;
 }
 
-
-.nav-links {
-    display: flex;
-    justify-content: space-around;
-    width: 40%;
+a:active {
+    background-color: rgb(224, 172, 172);
+    box-shadow: 0 5px rgb(139, 139, 139);
+    transform: translateY(4px);
 }
 
-.nav-link {
-    text-decoration: none;
-    color: #805fd8;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 16px;
+.center {
+    display: block;
+    margin-right: auto;
+    max-width: 55%;
 }
 
-button.nav-link:hover,
-a.nav-link:hover {
-    font-size: 20px;
+nav img {
+    max-width: 20%;
+    float: left;
 }
 
-button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
 
 .burger {
     display: none;

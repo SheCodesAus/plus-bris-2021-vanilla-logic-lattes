@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import './LoginForm.css'
-import { api } from '../../api/api'
+import { api } from '../../api'
 
 const RegistrationForm = () => {
 
@@ -59,31 +59,34 @@ const RegistrationForm = () => {
                 history.push("/");
             })
     };
-
     return (
-        <div className="page-login">
-            <div className="container-login">
-                <form onSubmit={handleSubmit} className="form-login">
-                    <p className=" title-login">Create an account</p>
-                    <div className="form-item-login">
-                        <label className="label-login">Email:</label>
-                        <input className="field-login" type="text" id="email" placeholder="Enter your email address" onChange={handleChange} />
+        <div className="pagewrapper">
+            <div className="wrapper">
+                <div className="title-text">
+                    <div className="title login">Signup Form</div>
+                </div>
+                <div className="form-container">
+                    <div class="form-inner">
+                        <form onSubmit={handleSubmit} className="form-login">
+                            <div className="field">
+                                <input type="email" placeholder="Email" id="email" required onChange={handleChange} />
+                            </div>
+                            <div className="field">
+                                <input type="text" placeholder="Username" id="username" required onChange={handleChange} />
+                            </div>
+                            <div className="field">
+                                <input type="password" id="password" placeholder="Password" required onChange={handleChange} />
+                            </div>
+                            <div className="field btn">
+                                <div className="btn-layer"></div>
+                                <input type="submit" value="Signup" />
+                            </div>
+                        </form>
                     </div>
-                    <div className="form-item-login">
-                        <label className="label-login" >Username:</label>
-                        <input className="field-login" type="text" id="username" placeholder="Enter your username" onChange={handleChange} />
-                    </div>
-                    <div className="form-item-login">
-                        <label className="label-login" >Password:</label>
-                        <input className="field-login" type="password" id="password" placeholder="Enter your password" onChange={handleChange} />
-                    </div>
-                    <div className="form-item-register">
-                        <input className="button-register " type="submit" value="Create Account" onClick={handleSubmit}></input>
-                    </div>
-                </form>
+                </div>
             </div>
-        </div>
-    )
+        </div>);
+
 }
 
 export default RegistrationForm

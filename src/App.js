@@ -2,9 +2,13 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from "./pages/HomePage"
 import Login from "./pages/LoginPage";
+import CreateCanvas from "./pages/CreateCanvasPage"
 import Register from "./pages/RegistrationPage";
 import Nav from './components/Nav/Nav';
+import Footer from './components/Footer/Footer'
+import About from "./pages/AboutPage";
 import './App.css'
+import CanvasPage from './pages/CanvasPage';
 
 const App = () => {
   const [isLoggedIn] = useState(window.localStorage.getItem("token"))
@@ -17,19 +21,29 @@ const App = () => {
           <Route path="/login">
             <Login />
           </Route>
-          <Router path="/register">
-            {/* {isLoggedIn ? <Register /> : <Login />} */}
+          <Route path="/register" >
             <Register />
-          </Router>
-          <Router path="/home">
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/createcanvas">
+            {isLoggedIn ? <CreateCanvas /> : <Login />}
+          </Route>
+          <Route path="/canvas/:id">
+            <CanvasPage />
+          </Route>
+          <Route path="/home">
             {isLoggedIn ? <Home /> : <Login />}
-          </Router>
-          <Router path="/">
+          </Route>
+          <Route path="/">
             {isLoggedIn ? <Home /> : <Login />}
-          </Router>
+          </Route>
         </Switch>
+        <Footer />
       </div>
     </Router>
+
   );
 }
 export default App;

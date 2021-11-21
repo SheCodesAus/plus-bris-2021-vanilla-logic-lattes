@@ -4,5 +4,5 @@ export const api = (uri, options = {}) => {
     if (token && !options.annonymous) {
         headers = { "Authorization": `Token ${token}`, ...headers }
     }
-    return fetch(`${process.env.REACT_APP_API_URL}${uri}`, { ...options, headers }).then(r => r.json())
+    return fetch(`${process.env.REACT_APP_API_URL}${uri}`, { ...options, headers }).then(r => options.method === "DELETE" ? r : r.json())
 }

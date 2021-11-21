@@ -1,0 +1,51 @@
+.note {
+    font-family: "Permanent Marker", cursive;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: lightyellow;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 3px lightgrey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.note__title,
+.note__description {
+    font-family: "Permanent Marker", cursive;
+    width: 100%;
+    padding: 8px 14px;
+    background: transparent;
+}
+
+.note__title {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.note__description {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.note__delete {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 20px;
+    color: lightgrey;
+    padding: 5px;
+}
+
+.note__delete:hover {
+    color: black;
+    cursor: pointer;
+}
+
+input.note__title,
+textarea.note__description {
+    outline: none;
+    resize: none;
+}

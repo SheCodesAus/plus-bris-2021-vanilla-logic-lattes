@@ -31,7 +31,7 @@ const App = () => {
             {isLoggedIn ? <CreateCanvas /> : <Login />}
           </Route>
           <Route path="/canvas/:id">
-            <CanvasPage />
+            {isLoggedIn ? <CanvasPage /> : <Login />}
           </Route>
           <Route path="/home">
             {isLoggedIn ? <Home /> : <Login />}

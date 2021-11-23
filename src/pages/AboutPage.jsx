@@ -1,12 +1,11 @@
 import React from 'react'
+import './style/canvasList.css'
 
 
 const About = () => {
 
     return (
         <div className="page-container">
-            About
-
 
         </div>);
 }

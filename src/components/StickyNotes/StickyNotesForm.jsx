@@ -1,11 +1,12 @@
 import React from 'react'
+import '../Authentication/LoginForm.css'
 
 const StickyNotesForm = props => {
     return (
-        <button className="add-new" onClick={props.addNote}>
+        <a href="#" className="button" onClick={props.addNote}>
             {" "}
             + New Note{" "}
-        </button>
+        </a>
     )
 }
 

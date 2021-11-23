@@ -1,12 +1,12 @@
 .note {
     font-family: "Permanent Marker", cursive;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     margin: 10px;
     background-color: lightyellow;
     border: 1px solid grey;
     box-shadow: 2px 2px 3px lightgrey;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -44,8 +44,43 @@
     cursor: pointer;
 }
 
+ul.stickynotes-list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
 input.note__title,
 textarea.note__description {
     outline: none;
     resize: none;
+    border: none;
+
 }
+
+input.note__title {
+    border-bottom: 1px solid lightgray;
+}
+
+
+.button {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 0.05em;
+    padding: 0.5rem 0.8rem;
+    margin: 0.5rem;
+    background: #fa4299;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #444440;
+}
+
+.button:active {
+    background-color: rgb(224, 172, 172);
+    box-shadow: 0 5px rgb(139, 139, 139);
+    transform: translateY(4px);
+}
+
+.button:hover {}

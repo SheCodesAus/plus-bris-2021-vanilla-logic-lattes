@@ -78,14 +78,17 @@ const CanvasPage = () => {
         <div className="page-container">
             <div className="canvas">
                 <h2 className="page-title">{canvasData.title}</h2>
+
                 <StickyNotesForm
                     addNote={addNote}
                 />
-                <StickyNotesList
-                    notes={notes}
-                    onType={onType}
-                    onRemove={onRemove}
-                />
+                <div>
+                    <StickyNotesList
+                        notes={notes}
+                        onType={onType}
+                        onRemove={onRemove}
+                    />
+                </div>
             </div>
 
         </div>

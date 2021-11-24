@@ -3,10 +3,10 @@ import '../Authentication/LoginForm.css'
 
 const StickyNotesForm = props => {
     return (
-        <a href="#" className="button" onClick={props.addNote}>
+        <button className="button" onClick={props.addNote}>
             {" "}
             + New Note{" "}
-        </a>
+        </button>
     )
 }
 

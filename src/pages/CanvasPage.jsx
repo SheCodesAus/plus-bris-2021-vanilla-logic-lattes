@@ -4,7 +4,6 @@ import { api } from "../api"
 import StickyNotesList from '../components/StickyNotes/StickyNotesList';
 import StickyNotesForm from '../components/StickyNotes/StickyNotesForm';
 
-
 const CanvasPage = () => {
     const [notes, setNotes] = useState([]);
     const [canvasData, setCanvasData] = useState({});
@@ -29,10 +28,6 @@ const CanvasPage = () => {
         return fetchData()
     }, []);
 
-    const updateNote = async (note) => {
-        return await api(`sticky_notes/${note.id}/`, { method: "PUT", body: JSON.stringify(note) })
-    }
-
     const onRemove = async (noteId) => {
         console.log(noteId);
         await api(`sticky_notes/${noteId}/`, { method: "DELETE" })
@@ -43,7 +38,7 @@ const CanvasPage = () => {
 
     const onType = async (noteId, updatedKey, updatedValue) => {
         console.log(noteId, updatedKey, updatedValue)
-        var updateIdMatch = async note => {
+        var updateIdMatch = note => {
             if (note.id !== noteId) {
                 return note;
             } else {
@@ -59,18 +54,18 @@ const CanvasPage = () => {
                         what: updatedValue
                     };
                 }
-                await updateNote(updatedNote)
                 return updatedNote;
             }
         };
-        var updatedNotes = await Promise.all(notes.map(updateIdMatch));
+        var updatedNotes = notes.map(updateIdMatch);
         setNotes(updatedNotes)
-    }
 
+        const updatedNote = updatedNotes.find(note => note.id === noteId)
+        debouncedUpdateNote(updatedNote)
+    }
 
     const addNote = async () => {
         const note = await mapNote(await api(`sticky_notes/`, { method: "POST", body: JSON.stringify({ canvas: id }) }))
-
         setNotes([...notes, note])
     }
 
@@ -96,3 +91,21 @@ const CanvasPage = () => {
 }
 
 export default CanvasPage
+
+const updateNote = async (note) => {
+    return await api(`sticky_notes/${note.id}/`, { method: "PUT", body: JSON.stringify(note) })
+}
+
+const debounce = (f) => {
+    let timer = null;
+    return (...args) => {
+        clearTimeout(timer)
+        return new Promise(resolve => {
+            timer = setTimeout(
+                () => resolve(f(...args)),
+                500
+            );
+        })
+    }
+}
+const debouncedUpdateNote = debounce(updateNote)

@@ -48,6 +48,7 @@ ul.stickynotes-list {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 input.note__title,

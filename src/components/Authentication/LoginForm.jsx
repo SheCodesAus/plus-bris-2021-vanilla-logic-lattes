@@ -37,6 +37,7 @@ const LoginForm = () => {
                     if (response.token) {
                         setError(false)
                         window.localStorage.setItem("token", response.token);
+                        window.localStorage.setItem("username", credentials.username);
                         window.location = `${window.location.origin}/`
                         history.push("/");
                     } else {

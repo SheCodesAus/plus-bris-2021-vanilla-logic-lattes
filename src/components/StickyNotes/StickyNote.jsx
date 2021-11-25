@@ -22,19 +22,28 @@ const StickyNote = (props) => {
             <input
                 type="text"
                 value={props.note.title}
-                onChange={updateTitle}
+                onChange={props.note._user.username === username ? updateTitle : ""}
                 placeholder="Title"
                 className="note__title"
             />
             <textarea
                 value={props.note.what}
-                onChange={updateDescription}
-                placeholder="What, Why, Who..."
+                onChange={props.note._user.username === username ? updateDescription : ""}
+                placeholder="What, Why..."
                 className="note__description"
             />
-            <span className="note__delete" onClick={() => deleteOnClick(props.note.id)}>
-                X
-            </span>
+            <input
+                type="text"
+                value={"Who: " + props.note._user.username}
+                placeholder="Title"
+                className="note__title"
+            />
+            {props.note._user.username === username &&
+                <span className="note__delete" onClick={() => deleteOnClick(props.note.id)}>
+                    X
+                </span>
+            }
+
         </div>
     );
 }
@@ -42,3 +51,5 @@ const StickyNote = (props) => {
 
 
 export default StickyNote
+
+const username = window.localStorage.getItem("username");

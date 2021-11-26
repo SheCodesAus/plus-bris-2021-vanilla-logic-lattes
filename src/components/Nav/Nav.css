@@ -36,6 +36,12 @@ a:active {
   max-width: 55%;
 }
 
+.username--nav{
+  float: right;
+  color: #FFF;
+  padding: 10px;
+}
+
 nav img {
   max-width: 20%;
   float: left;

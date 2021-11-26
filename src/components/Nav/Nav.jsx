@@ -29,13 +29,16 @@ const Nav = () => {
                 <Link className="button" to="/about">About</Link>
                 {!isLoggedIn && <Link className="button" to="/login">Login</Link>}
                 {isLoggedIn && <Link onClick={logout} className="button" to="/login">Logout</Link>}
+
                 {!isLoggedIn && <Link className="button" to="/register">Register</Link>}
                 <div className={`burger`} onClick={navSlide}>
                     <div className="line1"></div>
                     <div className="line2"></div>
                     <div className="line3"></div>
                 </div>
+
             </nav>
+            {isLoggedIn && <div className="username--nav">Hi, {username}</div>}
             <div id="center">
                 <img className="center" src={sprinkles} alt="logo" />
             </div>
@@ -44,3 +47,5 @@ const Nav = () => {
 }
 
 export default Nav;
+
+const username = window.localStorage.getItem("username");

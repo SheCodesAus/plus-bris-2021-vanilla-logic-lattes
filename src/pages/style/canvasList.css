@@ -5,3 +5,11 @@
     flex-wrap: wrap;
     flex-direction: column;
 }
+
+.button:hover {
+    left: 0;
+}
+
+.page-title--home{
+    color:white;
+}

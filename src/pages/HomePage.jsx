@@ -17,7 +17,7 @@ const Home = () => {
         canvasList.length ?
             <div className="page-container">
                 <div>
-                    <Link to="/createcanvas">Create a new Canvas</Link>
+                    <Link className="button" to="/createcanvas">Create a new Canvas</Link>
                     <h2 className="">Find your canvases: </h2>
                 </div>
                 <div id="project-list">
@@ -31,10 +31,10 @@ const Home = () => {
                 </div>
             </div>
             : <div className="page-container">
-                <h3 className="page-title">You Don't have any canvas to display 😞</h3>
-                <Link to="/createcanvas">Create your first Canvas</Link>
+                <h2 className="page-title--home">You Don't have any canvas to display yet</h2>
+                <Link className="button" style={{ width: 'fit-content' }} to="/createcanvas">Create your first Canvas</Link>
 
-            </div>);
+            </div >);
 }
 
 export default Home

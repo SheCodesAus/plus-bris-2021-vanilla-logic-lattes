@@ -32,13 +32,13 @@ a:active {
 
 .center {
   display: block;
-  margin-right: auto;
   max-width: 55%;
+  padding-left: 20px;
 }
 
-.username--nav{
+.username--nav {
   float: right;
-  color: #FFF;
+  color: #fff;
   padding: 10px;
 }
 

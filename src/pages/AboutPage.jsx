@@ -3,7 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="page-container">
-      <div>
+      <div className="about-text">
         <p>
           We love doughnuts, and we love the little sprinkles that make
           doughnuts (and life) oh so wonderful. 😊 With Sprinkles, we look at

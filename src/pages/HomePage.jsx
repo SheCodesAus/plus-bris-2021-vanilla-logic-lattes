@@ -16,9 +16,9 @@ const Home = () => {
     return (
         canvasList.length ?
             <div className="page-container">
-                <div>
-                    <Link className="button" to="/createcanvas">Create a new Canvas</Link>
-                    <h2 className="">Find your canvases: </h2>
+                <div className="home-header">
+                    <Link className="button create-newcanvas" to="/createcanvas">Create a new Canvas</Link>
+                    <p className="find-canvas-text">Find your canvases: </p>
                 </div>
                 <div id="canvas-list">
                     {

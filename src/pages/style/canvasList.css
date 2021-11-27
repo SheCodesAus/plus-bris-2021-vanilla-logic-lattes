@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.page-container p {
+.about-text p {
   padding: 15px;
   text-align: justify;
   text-indent: 25px;
@@ -38,3 +38,9 @@
 .page-title--home {
   color: white;
 }
+.find-canvas-text{
+    color:#FFF;
+    margin: 0;
+    padding: 0;
+}
+

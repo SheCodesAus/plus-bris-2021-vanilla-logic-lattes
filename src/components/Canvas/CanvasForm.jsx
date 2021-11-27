@@ -51,7 +51,7 @@ const CanvasForm = () => {
                                 <textarea rows="4" cols="50" id="description" placeholder="Canvas Description" onChange={handleChange}></textarea>
                             </div>
                             <div className="field">
-                                <input className="field" type="text" id="image" placeholder="Canvas Image" onChange={handleChange} />
+                                <input className="field" type="text" id="image" placeholder="Canvas Image Url" onChange={handleChange} />
                             </div>
                             <div className="field" style={{ marginBottom: '41px' }}>
                                 <input className="field" type="text" id="team" placeholder="Team" onChange={handleChange} />

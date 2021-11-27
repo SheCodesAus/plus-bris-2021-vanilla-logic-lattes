@@ -9,4 +9,10 @@ textarea{
     border-bottom-width: 2px;
     font-size: 17px;
     transition: all 0.3s ease;
+    max-height: 70px;
+}
+
+textarea::placeholder {
+  color: #999;
+  transition: all 0.3s ease;
 }

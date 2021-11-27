@@ -53,7 +53,7 @@ const CanvasForm = () => {
                             <div className="field">
                                 <input className="field" type="text" id="image" placeholder="Canvas Image" onChange={handleChange} />
                             </div>
-                            <div className="field">
+                            <div className="field" style={{ marginBottom: '41px' }}>
                                 <input className="field" type="text" id="team" placeholder="Team" onChange={handleChange} />
                             </div>
                             <div className="field btn">
@@ -71,7 +71,3 @@ const CanvasForm = () => {
 
 export default CanvasForm;
 
-<div className="field btn">
-    <div className="btn-layer"></div>
-    <input type="submit" value="Login" />
-</div>

@@ -6,22 +6,10 @@ const About = () => {
       <div>
         <p>
           We love doughnuts, and we love the little sprinkles that make
-          doughnuts (and life) oh so wonderful. 😊
-        </p>
-        <p>
-          With Sprinkles, we look at the little things on the bright side of
-          life. The ones that bring happiness, the ones that motivate us, the
-          ones that inspire us, and everything in between.
-        </p>
-        <p class="question">- What are they, you might ask? -</p>
-        <p>
-          We love doughnuts, and we love the little sprinkles that make
-          doughnuts (and life) oh so wonderful. 😊
-        </p>
-        <p>
-          With Sprinkles, we look at the little things on the bright side of
-          life. The ones that bring happiness, the ones that motivate us, the
-          ones that inspire us, and everything in between.
+          doughnuts (and life) oh so wonderful. 😊 With Sprinkles, we look at
+          the little things on the bright side of life. The ones that bring
+          happiness, the ones that motivate us, the ones that inspire us, and
+          everything in between.
         </p>
         <p class="question">
           - What are they, you might ask? Celebrating the small wins! 🙌 -

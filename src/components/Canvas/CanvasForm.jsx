@@ -48,13 +48,12 @@ const CanvasForm = () => {
                                 <input type="text" id="title" placeholder="Canvas title" onChange={handleChange} required />
                             </div>
                             <div className="field">
-                                <textarea id="description" placeholder="Canvas Description" onChange={handleChange}></textarea>
+                                <textarea rows="4" cols="50" id="description" placeholder="Canvas Description" onChange={handleChange}></textarea>
                             </div>
-                            <div>
-                                <label>Public?</label>
-                                <input className="field" type="checkbox" id="is_public" onChange={handleChange} />
+                            <div className="field">
+                                <input className="field" type="text" id="image" placeholder="Canvas Image" onChange={handleChange} />
                             </div>
-                            <div>
+                            <div className="field">
                                 <input className="field" type="text" id="team" placeholder="Team" onChange={handleChange} />
                             </div>
                             <div className="field btn">
@@ -71,3 +70,8 @@ const CanvasForm = () => {
 }
 
 export default CanvasForm;
+
+<div className="field btn">
+    <div className="btn-layer"></div>
+    <input type="submit" value="Login" />
+</div>

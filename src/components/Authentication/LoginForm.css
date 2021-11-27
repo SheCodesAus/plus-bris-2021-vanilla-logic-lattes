@@ -68,6 +68,8 @@ p {
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper .title-text {
@@ -187,13 +189,20 @@ input[type="radio"] {
   border-color: #fc83bb;
   /* box-shadow: inset 0 0 3px #fb6aae; */
 }
-
+textarea:focus {
+  border-color: #fc83bb;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
 .form-inner form .field input::placeholder {
   color: #999;
   transition: all 0.3s ease;
 }
 
 form .field input:focus::placeholder {
+  color: #b3b3b3;
+}
+
+form textarea textarea:focus::placeholder {
   color: #b3b3b3;
 }
 

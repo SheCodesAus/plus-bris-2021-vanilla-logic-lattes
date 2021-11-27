@@ -1,5 +1,5 @@
 import React from "react";
-import donutIcon from '../../images/favicon.ico'
+
 import { Link } from "react-router-dom";
 
 function CanvasCard({ projectData, isEditMode = false }) {
@@ -11,7 +11,9 @@ function CanvasCard({ projectData, isEditMode = false }) {
         <div className="card-wrapper">
             <div className="project-card">
                 <Link to={`/canvas/${projectData.id}`}>
-                    <h3 className="project-title--card"><img style={{ width: '25px' }} src={donutIcon} alt="list decoration" />{projectData.title}</h3>
+                    <img src={projectData.image} alt="canvas " />
+                    <h3 className="project-title--card">{projectData.title}</h3>
+
                 </Link>
             </div>
 

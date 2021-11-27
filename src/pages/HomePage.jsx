@@ -20,7 +20,7 @@ const Home = () => {
                     <Link className="button" to="/createcanvas">Create a new Canvas</Link>
                     <h2 className="">Find your canvases: </h2>
                 </div>
-                <div id="project-list">
+                <div id="canvas-list">
                     {
                         canvasList.map((projectData, key) => {
                             return (

@@ -9,7 +9,7 @@
 }
 
 .page-container p {
-  padding-bottom: 5px;
+  padding-bottom: 3px;
   text-align: justify;
 }
 
@@ -22,18 +22,19 @@
   left: 0;
 }
 
-.page-title--home{
-    color:white;
+.page-title--home {
+  color: white;
 }
 
-#canvas-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 2em;
-    max-width: 80%;
-    justify-content: center;}
+#canvas-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2em;
+  max-width: 80%;
+  justify-content: center;
+}
 
-    .page-title--home {
-        color: white;
-      }
+.page-title--home {
+  color: white;
+}

@@ -9,13 +9,14 @@
 }
 
 .page-container p {
-  padding-bottom: 3px;
+  padding: 15px;
   text-align: justify;
+  text-indent: 25px;
 }
 
 .question {
   text-align: center !important;
-  padding-bottom: 14px !important;
+  padding-bottom: 25px !important;
 }
 
 .button:hover {

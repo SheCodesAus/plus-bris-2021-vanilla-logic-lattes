@@ -1,5 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Indie+Flower&family=Poppins&family=Roboto:wght@300;400&display=swap');
 .note {
-    font-family: "Permanent Marker", cursive;
     width: 250px;
     height: 250px;
     margin: 10px;
@@ -9,25 +9,25 @@
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    
+    position: relative;
 }
 
 .note__title,
 .note__description {
-    font-family: "Permanent Marker", cursive;
+    font-family: 'Indie Flower', cursive;
     width: 100%;
     padding: 8px 14px;
     background: transparent;
 }
 
 .note__title {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 }
 
 .note__description {
     flex-grow: 1;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .note__delete {
@@ -64,6 +64,10 @@ input.note__title {
     border-bottom: 1px solid lightgray;
 }
 
+input.note__name {
+    border-bottom: none
+}
+
 
 .button {
     color: #fff;
@@ -76,7 +80,8 @@ input.note__title {
     background: #fa4299;
     border-radius: 5px;
     border-width: 2px;
-    border-color: #444440;
+    border:none;
+    margin-bottom: 1em;
 }
 
 .button:active {
@@ -85,4 +90,26 @@ input.note__title {
     transform: translateY(4px);
 }
 
-.button:hover {}
+.button:hover {
+    transform: scale(1.1);
+}
+
+
+
+@media screen and (max-width:700px){
+    .canvas-page-header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;        
+    }
+    .canvas h2 {
+        margin-top: 0; 
+        color: #FFF;
+    }
+    .canvas, .page-container{
+        padding: 0;
+        margin: 0;
+    }
+   
+}

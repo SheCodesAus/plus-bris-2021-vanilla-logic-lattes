@@ -4,10 +4,7 @@ import { Link } from "react-router-dom";
 import './CanvasCard.css'
 
 function CanvasCard({ projectData, isEditMode = false }) {
-    // const token = window.localStorage.getItem("token");
-    // const deleteProject = (id) => {
-    //     return fetch(`${process.env.REACT_APP_API_URL}canvas/${id}`, { method: 'delete', "Authorization": `Token ${token}` }).then(r => r.json())
-    // }
+
     return (
         <div className="canvas-card">
             <Link to={`/canvas/${projectData.id}`}>

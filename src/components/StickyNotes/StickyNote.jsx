@@ -36,7 +36,7 @@ const StickyNote = (props) => {
                 type="text"
                 value={"Who: " + props.note._user.username}
                 placeholder="Title"
-                className="note__title"
+                className="note__title note__name"
             />
             {props.note._user.username === username &&
                 <span className="note__delete" onClick={() => deleteOnClick(props.note.id)}>

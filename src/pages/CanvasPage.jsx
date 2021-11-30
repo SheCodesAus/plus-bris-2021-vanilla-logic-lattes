@@ -72,11 +72,15 @@ const CanvasPage = () => {
     return (
         <div className="page-container">
             <div className="canvas">
-                <h2 className="page-title">{canvasData.title}</h2>
+                <div className="canvas-page-header">
 
-                <StickyNotesForm
-                    addNote={addNote}
-                />
+                    <h2 className="page-title">{canvasData.title}</h2>
+                    <StickyNotesForm
+                        addNote={addNote}
+                    />
+                </div>
+
+
                 <div>
                     <StickyNotesList
                         notes={notes}

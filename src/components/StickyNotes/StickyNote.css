@@ -11,6 +11,12 @@
     flex-direction: column;
     position: relative;
 }
+.inner-sticky-wrapper{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
 .note__title,
 .note__description {

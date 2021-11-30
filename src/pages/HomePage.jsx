@@ -31,7 +31,7 @@ const Home = () => {
                 </div>
             </div>
             : <div className="page-container">
-                <h2 className="page-title--home">You Don't have any canvas to display yet</h2>
+                <h2 className="page-title--home">You Don't have any canvases to display yet</h2>
                 <Link className="button" style={{ width: 'fit-content' }} to="/createcanvas">Create your first Canvas</Link>
 
             </div >);

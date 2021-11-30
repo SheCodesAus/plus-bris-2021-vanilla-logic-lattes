@@ -71,11 +71,17 @@ nav .burger div {
   nav{
     border-radius: 0;
     margin-bottom: 3em;
-    position: sticky;
+    position: fixed;
+    top: 0;
   }
+  nav img {
+    max-width: 50%;
+    float: right;
+}
   .responsive-nav{
     display: flex;
     justify-content: space-between;
+    padding: 0.6em;
   }
   .username--nav_resp{
     color: #F949B1;

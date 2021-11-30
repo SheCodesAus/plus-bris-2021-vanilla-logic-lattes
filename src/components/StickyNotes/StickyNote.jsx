@@ -26,18 +26,21 @@ const StickyNote = (props) => {
                 placeholder="Title"
                 className="note__title"
             />
-            <textarea
-                value={props.note.what}
-                onChange={props.note._user.username === username ? updateDescription : ""}
-                placeholder="What, Why..."
-                className="note__description"
-            />
-            <input
-                type="text"
-                value={"Who: " + props.note._user.username}
-                placeholder="Title"
-                className="note__title note__name"
-            />
+            <div className="inner-sticky-wrapper">
+                <textarea
+                    rows="10"
+                    value={props.note.what}
+                    onChange={props.note._user.username === username ? updateDescription : ""}
+                    placeholder="What, Why..."
+                    className="note__description"
+                />
+                <input
+                    type="text"
+                    value={"Who: " + props.note._user.username}
+                    placeholder="Title"
+                    className="note__title note__name"
+                />
+            </div>
             {props.note._user.username === username &&
                 <span className="note__delete" onClick={() => deleteOnClick(props.note.id)}>
                     X

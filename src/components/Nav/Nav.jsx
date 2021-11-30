@@ -4,6 +4,8 @@ import "./Nav.css";
 import logo from "../../images/donut8.png";
 import sprinkles from "../../images/logos.png";
 
+import sprinklesLogo from "../../images/logotrans.png";
+
 const Nav = () => {
   const history = useHistory();
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -58,7 +60,7 @@ const Nav = () => {
             <div className="line2"></div>
             <div className="line3"></div>
           </div>
-          {isLoggedIn && <div className="username--nav_resp">Hi, {username}</div>}
+          {isLoggedIn && <div className="username--nav_resp"><img className="" id="" src={sprinklesLogo} alt="logo" /></div>}
         </div>
       </nav>
       {isLoggedIn && <div className="username--nav">Hi, {username}</div>}

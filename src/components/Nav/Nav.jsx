@@ -23,10 +23,10 @@ const Nav = () => {
   return (
     <div className="divnav">
       <nav>
-        <Link className="logo" to="/">
-          <img src={logo} alt="logo" className="img-logo" />
-        </Link>
         <div className={`nav-items ${navbarOpen ? " nav-active" : ""}`}>
+          <Link className="logo" to="/">
+            <img src={logo} alt="logo" className="img-logo" />
+          </Link>
           {isLoggedIn && (
             <Link className="button" to="/">
               Home

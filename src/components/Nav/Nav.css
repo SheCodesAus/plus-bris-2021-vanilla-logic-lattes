@@ -1,17 +1,10 @@
-nav * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-nav,
-.nav {
+nav {
   text-align: right;
   background-color: #fff;
   width: 100%;
   border-radius: 5px;
   padding: 2px;
+  height: 60px;
 }
 
 a {
@@ -31,9 +24,7 @@ a:active {
 }
 
 .center {
-  display: block;
   max-width: 55%;
-  padding-left: px;
 }
 
 .username--nav {
@@ -74,6 +65,7 @@ nav .burger div {
 
   .img-logo, #sprinkles-logo{
     display: none;
+    height: 0px;
   }
   
   nav{

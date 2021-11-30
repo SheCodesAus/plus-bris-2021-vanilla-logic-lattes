@@ -263,7 +263,7 @@ form .btn input[type="submit"] {
 
 /* Responsiveness  */
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   h1 {
     font-size: 36px;
   }
@@ -272,8 +272,7 @@ form .btn input[type="submit"] {
     display: block;
     padding: 5px;
   }
-
-  /* form {
-          width: 90%;
-        } */
+.wrapper{
+  margin-top: 7em;
+}
 }

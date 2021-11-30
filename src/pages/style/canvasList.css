@@ -30,6 +30,7 @@
 #canvas-list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   width: 100%;
   justify-content: space-evenly;
   margin-bottom: 3em;
@@ -44,3 +45,9 @@
     padding: 0;
 }
 
+@media ( max-width: 700px ) {
+  #canvas-list { flex-direction: column; align-content: center;}
+  .canvas-card{    min-width: 213px;}
+  .page-container{display: block  ;}
+  .about-text{margin-top: 3em;}
+}

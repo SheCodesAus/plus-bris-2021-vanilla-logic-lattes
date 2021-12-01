@@ -23,8 +23,10 @@ const Home = () => {
                 <div id="canvas-list">
                     {
                         canvasList.map((projectData, key) => {
+                            console.log(projectData)
                             return (
                                 <CanvasCard key={key} projectData={projectData} isEditMode={true} />
+
                             );
                         })
                     }

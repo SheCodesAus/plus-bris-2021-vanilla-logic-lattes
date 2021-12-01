@@ -56,7 +56,7 @@ const RegistrationForm = () => {
         postData()
             .then((response) => {
                 console.log('new user created')
-                history.push("/");
+                history.push("/login");
             })
     };
     return (

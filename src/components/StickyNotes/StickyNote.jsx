@@ -29,6 +29,7 @@ const StickyNote = (props) => {
             <div className="inner-sticky-wrapper">
                 <textarea
                     rows="10"
+                    columns="2"
                     value={props.note.what}
                     onChange={props.note._user.username === username ? updateDescription : ""}
                     placeholder="What, Why..."

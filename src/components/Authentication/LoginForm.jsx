@@ -76,7 +76,7 @@ const LoginForm = () => {
         //     </div>
         // </div>
         <div className="pagewrapper">
-            <div className="wrapper">
+            <div className="wrapper reglogin">
                 <div className="title-text">
                     <div className="title login">Login Form</div>
                 </div>

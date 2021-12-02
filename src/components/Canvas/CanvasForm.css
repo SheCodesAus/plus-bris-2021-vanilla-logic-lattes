@@ -1,5 +1,5 @@
 
-textarea{
+textarea#description{
   width:100%;
   resize: none;
     outline: none;
@@ -15,4 +15,12 @@ textarea{
 textarea::placeholder {
   color: #999;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 700px) {
+
+  .canvform{
+    margin: 5em 2em;
+  }
+
 }

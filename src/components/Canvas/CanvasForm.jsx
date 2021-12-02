@@ -36,7 +36,7 @@ const CanvasForm = () => {
     };
     return (
         <div className="pagewrapper">
-            <div className="wrapper">
+            <div className="wrapper canvform">
                 <div className="title-text">
                     <div className="title">Create a new Canvas</div>
                 </div>

@@ -61,7 +61,7 @@ const RegistrationForm = () => {
     };
     return (
         <div className="pagewrapper">
-            <div className="wrapper">
+            <div className="wrapper reglogin">
                 <div className="title-text">
                     <div className="title login">Signup Form</div>
                 </div>

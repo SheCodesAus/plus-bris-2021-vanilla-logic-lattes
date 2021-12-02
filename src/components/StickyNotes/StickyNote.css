@@ -65,6 +65,17 @@ textarea.note__description {
     border: none;
 
 }
+textarea.note__description{
+    width:100%;
+    resize: none;
+      outline: none;
+      padding-left: 15px;
+      border-radius: 5px;
+      border-bottom-width: 2px;
+      font-size: 17px;
+      transition: all 0.3s ease;
+      max-height: 150px;
+  }
 
 input.note__title {
     border-bottom: 1px solid lightgray;
@@ -109,13 +120,19 @@ input.note__name {
         width: 100%;
         align-items: center;        
     }
+    .home-header{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .canvas h2 {
         margin-top: 0; 
         color: #FFF;
     }
     .canvas, .page-container{
         padding: 0;
-        margin: 0;
+        margin-top: 3em;
     }
    
 }

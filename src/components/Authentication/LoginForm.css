@@ -272,7 +272,8 @@ form .btn input[type="submit"] {
     display: block;
     padding: 5px;
   }
-.wrapper{
-  margin-top: 7em;
+
+.reglogin{
+ margin: 10em 2em;
 }
 }

@@ -71,7 +71,7 @@ nav .burger div {
   nav{
     border-radius: 0;
     margin-bottom: 3em;
-    position: fixed;
+    position: relative;
     top: 0;
   }
   nav img {

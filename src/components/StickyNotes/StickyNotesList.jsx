@@ -12,7 +12,7 @@ const StickyNotesList = props => {
                     onType={props.onType}
                     onRemove={props.onRemove}
                 /></li>)}
-            </ul> : <h3>No notes</h3>)
+            </ul> : <h3 id="no-notes">No notes</h3>)
 }
 
 export default StickyNotesList

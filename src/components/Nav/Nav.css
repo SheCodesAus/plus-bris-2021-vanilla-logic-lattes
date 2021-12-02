@@ -24,7 +24,7 @@ a:active {
 }
 
 .center {
-  max-width: 55%;
+  max-width: 60%;
 }
 
 .username--nav {
@@ -75,7 +75,8 @@ nav .burger div {
     top: 0;
   }
   nav img {
-    max-width: 50%;
+    max-width: unset;
+    width: 150px;
     float: right;
 }
   .responsive-nav{

@@ -10,7 +10,7 @@
   }
   .canvas-card img{
     width: 100%;
-    max-height: 80%;
+    height: 65%;
     object-fit: cover;
   }
   

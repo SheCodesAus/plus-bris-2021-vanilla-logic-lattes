@@ -121,6 +121,10 @@ input.note__name {
     text-align: center;
 }
 
+.page-title{
+    color: #FFF
+}
+
 @media screen and (max-width:700px){
     
     .home-header{

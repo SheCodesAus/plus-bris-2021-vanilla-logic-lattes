@@ -60,7 +60,7 @@ const Nav = () => {
             <div className="line2"></div>
             <div className="line3"></div>
           </div>
-          {isLoggedIn && <div className="username--nav_resp"><img className="" id="" src={sprinklesLogo} alt="logo" /></div>}
+          <div className="username--nav_resp"><img className="" id="" src={sprinklesLogo} alt="logo" /></div>
         </div>
       </nav>
       {isLoggedIn && <div className="username--nav">Hi, {username}</div>}

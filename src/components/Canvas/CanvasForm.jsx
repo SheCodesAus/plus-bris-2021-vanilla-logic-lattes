@@ -45,16 +45,16 @@ const CanvasForm = () => {
                         <form form onSubmit={handleSubmit} className="login">
                             <div className="field">
 
-                                <input type="text" id="title" placeholder="Canvas title" onChange={handleChange} required />
+                                <input type="text" id="title" placeholder="Canvas title" required onChange={handleChange} required />
                             </div>
                             <div className="field">
-                                <textarea rows="4" cols="50" id="description" placeholder="Canvas Description" onChange={handleChange}></textarea>
+                                <textarea rows="4" cols="50" id="description" required placeholder="Canvas Description" onChange={handleChange}></textarea>
                             </div>
                             <div className="field">
                                 <input className="field" type="text" id="image" placeholder="Canvas Image Url" onChange={handleChange} />
                             </div>
                             <div className="field" style={{ marginBottom: '41px' }}>
-                                <input className="field" type="text" id="team" placeholder="Team" onChange={handleChange} />
+                                <input className="field" type="text" id="team" required placeholder="Team" onChange={handleChange} />
                             </div>
                             <div className="field btn">
                                 <div className="btn-layer"></div>

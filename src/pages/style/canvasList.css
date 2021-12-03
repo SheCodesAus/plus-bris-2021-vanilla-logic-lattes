@@ -1,3 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#canvas-search {
+  color: black;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.8rem;
+  margin: 0.5rem;
+  background: white;
+  border-radius: 5px;
+  border-width: 2px;
+  border:none;
+  margin-bottom: 1em;
+}
+
 .page-container {
   display: flex;
   height: 100%;

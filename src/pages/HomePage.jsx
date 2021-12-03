@@ -13,16 +13,27 @@ const Home = () => {
             .then((data) => { setCanvasList(data); });
     }, []);
 
+    const [searchTerm,setSearchTerm] = useState('')
+
     return (
         canvasList.length ?
             <div className="page-container">
                 <div className="home-header">
-                    <Link className="button create-newcanvas" to="/createcanvas">Create a new Canvas</Link>
-                    <p className="find-canvas-text">Find your canvases: </p>
+                    <div className="canvas-container">
+                        <Link className="button create-newcanvas" to="/createcanvas">Create a new Canvas</Link>
+                        <p className="find-canvas-text">Find your canvases: </p>
+                        <input id="canvas-search" type="text" placeholder="Search by Team Name..." onChange={event => {setSearchTerm(event.target.value)}}/>
+                    </div>
                 </div>
                 <div id="canvas-list">
                     {
-                        canvasList.map((projectData, key) => {
+                        canvasList.filter((projectData)=> {
+                            if (searchTerm == "") {
+                                return projectData
+                            } else if (projectData.team.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                return projectData
+                            }
+                        }).map((projectData, key) => {
 
                             return (
                                 <CanvasCard key={key} projectData={projectData} isEditMode={true} />
@@ -38,5 +49,7 @@ const Home = () => {
 
             </div >);
 }
+
+    
 
 export default Home
